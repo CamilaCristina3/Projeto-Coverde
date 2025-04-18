@@ -5,8 +5,9 @@ def Index(request):
     """
     Renderiza a página inicial com todos os produtos e categorias disponíveis.
     """
-    # Obtendo todos os produtos e categorias disponíveis
+    # Obtendo todos os produtos e categorias disponíveis u
     produtos = Produto.objects.all()
+
     categorias = Categoria.objects.all()
 
     contexto = {

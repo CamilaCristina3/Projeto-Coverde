@@ -6,3 +6,4 @@ class CategoriaView(View):
     def get(self, request):
         categorias = Categoria.objects.all()
         return render(request, "categorias.html", {"categorias": categorias})
+    #test
