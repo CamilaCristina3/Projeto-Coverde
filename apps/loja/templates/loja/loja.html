@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja - Coverde</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Certifique-se de que o CSS esteja configurado -->
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="top-header">
+        <div class="logo-area">
+            <img src="{% static 'images/logo.png' %}" alt="Logo Coverde">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="{% url 'homepage' %}">Início</a></li>
+                <li><a href="{% url 'sobre' %}">Sobre Nós</a></li>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                <li><a href="{% url 'loja' %}">Loja</a></li>
+                <li><a href="{% url 'carrinho' %}">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção de Filtros -->
+    <section class="filtros">
+        <h1>Filtrar Produtos</h1>
+        <form method="get" action="">
+            <label for="categoria">Categoria:</label>
+            <select name="categoria" id="categoria">
+                <option value="">Todas as Categorias</option>
+                {% for categoria in categorias %}
+                <option value="{{ categoria.id }}" {% if categoria.id|stringformat:"s" == request.GET.categoria %}selected{% endif %}>
+                    {{ categoria.nome }}
+                </option>
+                {% endfor %}
+            </select>
+            <button type="submit">Filtrar</button>
+        </form>
+    </section>
+
+    <!-- Produtos -->
+    <section class="produtos">
+        <h1>Produtos Disponíveis</h1>
+        <div class="produtos-lista">
+            {% if produtos %}
+                {% for produto in produtos %}
+                <div class="produto-item">
+                    <img src="{{ produto.imagens.first.imagem.url }}" alt="{{ produto.nome }}">
+                    <h2>{{ produto.nome }}</h2>
+                    <p><strong>Preço:</strong> € {{ produto.preco }}</p>
+                    <p><strong>Categoria:</strong> {{ produto.categoria.nome }}</p>
+                    <a href="{% url 'produto_detail' produto.id %}" class="btn-cta">Detalhes</a>
+                </div>
+                {% endfor %}
+            {% else %}
+                <p>Não há produtos disponíveis na categoria selecionada.</p>
+            {% endif %}
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2025 Coverde. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

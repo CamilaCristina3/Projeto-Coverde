@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Soluções - COVERDE</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 🔝 Header -->
+    <header class="header">
+        <div class="container">
+            <img src="{% static 'css/images/logo.png' %}" class="logo" alt="Logo COVERDE">
+            <nav>
+                <ul class="menu">
+                    <li><a href="{% url 'loja' %}">Início</a></li>
+                    <li><a href="{% url 'Soluções' %}" class="active">Soluções</a></li>
+                    <li><a href="{% url 'sobre' %}">Sobre</a></li>
+                    <li><a href="{% url 'Entrar' %}">Login</a></li>
+                    <li><a href="{% url 'Registar' %}" class="btn">Registar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ✨ Conteúdo Principal -->
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Soluções COVERDE</h1>
+                <p>Venda seus produtos diretamente ao consumidor final. Sem intermediários, com preços justos e mais rentabilidade.</p>
+                <a href="{% url 'registrar' %}" class="btn-cta">Começa Já</a>
+            </div>
+        </section>
+
+        <section class="solutions">
+            <h2>As Nossas Soluções</h2>
+            <div class="solutions-grid">
+                <!-- Consumidores -->
+                <div class="solution-card">
+                    <img src="{% static 'css/images/consumidores.png' %}" alt="Consumidores">
+                    <h3>Consumidores</h3>
+                    <p>Descubra uma ampla variedade de produtos frescos diretamente de produtores locais.</p>
+                    <a href="{% url 'consumidores' %}" class="btn-verde">Saiba Mais</a>
+                </div>
+
+                <!-- Produtores -->
+                <div class="solution-card">
+                    <img src="{% static 'css/images/produtores.png' %}" alt="Produtores">
+                    <h3>Produtores</h3>
+                    <p>Amplie sua rentabilidade ao conectar-se diretamente com os consumidores finais.</p>
+                    <a href="{% url 'produtores' %}" class="btn-verde">Saiba Mais</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 👣 Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 COVERDE. Agricultura Familiar com orgulho. 🌿</p>
+    </footer>
+</body>
+</html>

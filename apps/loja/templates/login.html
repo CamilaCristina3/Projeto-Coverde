@@ -1,0 +1,47 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - COVERDE</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Certifique-se de que o caminho para o CSS esteja correto -->
+</head>
+<body>
+    <div class="login-container">
+        <!-- Bandeiras para seleção de idioma -->
+        <div class="language-options">
+            <img src="{% static 'images/bandeira-britanica.png' %}"style="width: 100px; height: 100px;" alt="Inglês" title="Inglês">
+            <img src="bandeira-portuguesa.png" alt="Português" title="Português">
+        </div>
+
+        <!-- Logotipo -->
+        <div class="logo">
+            <img src="{% static 'images/logo.png' %}" style="width: 100px; height: 100px;" alt="COVERDE">
+        </div>
+
+        <!-- Formulário de Login -->
+        <div class="login-form">
+            <h1>Bem-vindo/a de volta</h1>
+            <form action="/login" method="post">
+                <label for="email">Correio eletrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Insira seu email" required>
+
+                <label for="senha">Palavra-passe:</label>
+                <input type="password" id="senha" name="senha" placeholder="Insira sua palavra-passe" required>
+
+                <a href="/recuperar-senha" class="forgot-password">Esqueci a minha palavra-passe?</a>
+
+                <button type="submit">Entrar na minha conta</button>
+            </form>
+
+            <!-- Link para cadastro -->
+            <div class="register">
+                <p>Ainda não tem uma conta?</p>
+                <a href="/registrar" class="register-button">Registar na Coverde</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

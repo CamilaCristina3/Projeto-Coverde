@@ -1,0 +1,35 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="hero-section sobre-hero">
+  <div class="hero-content">
+    <h1>Sobre nós</h1>
+  </div>
+</section>
+
+<section class="sobre-nos">
+  <div class="container">
+    <h1>Sobre a Coverde</h1>
+    <p>A Coverde é uma plataforma que conecta consumidores e produtores locais, promovendo o acesso a produtos frescos, sustentáveis e de origem confiável.</p>
+
+    <div class="info-boxes">
+      <div class="box">
+        <h3>🌱 Missão</h3>
+        <p>Facilitar o acesso a alimentos saudáveis, apoiando pequenos produtores e reduzindo o desperdício alimentar.</p>
+      </div>
+      <div class="box">
+        <h3>👁️ Visão</h3>
+        <p>Ser referência em comércio justo e sustentável de produtos agrícolas.</p>
+      </div>
+      <div class="box">
+        <h3>💚 Valores</h3>
+        <p>Transparência, Sustentabilidade, Comunidade e Inovação.</p>
+      </div>
+    </div>
+
+    <img src="{% static 'css/images/Nossos Produtos.png' %}" alt="Equipe" class="equipe-img">
+  </div>
+</section>
+{% endblock %}

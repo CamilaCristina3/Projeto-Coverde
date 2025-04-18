@@ -1,0 +1,45 @@
+<!-- base.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>COVERDE - Agricultura Familiar</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <a href="{% url 'homepage' %}">
+            <img src="{% static 'ccs/images/logo.png' %}" class="logo" alt="Logo COVERDE">
+        </a>
+        <nav>
+
+
+            <ul class="menu">
+                <li><a href="{% url 'homepage' %}">Início</a></li>
+                <li><a href="{% url 'loja' %}">Produtos</a></li>
+                <li><a href="{% url 'sobre' %}">Sobre</a></li>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                {% if request.session.email %}
+                    <li><a href="{% url 'pedidos' %}">Meus Pedidos</a></li>
+                    <li><a href="{% url 'sair' %}">Sair</a></li>
+                {% else %}
+                    <li><a href="{% url 'entrar' %}">Login</a></li>
+                    <li><a href="{% url 'registrar' %}" class="btn">Registar</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<footer class="footer">
+    <p>&copy; 2025 COVERDE. Agricultura Familiar com orgulho. 🌿</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+<h1>Recuperar Senha</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Recuperar</button>
+</form>

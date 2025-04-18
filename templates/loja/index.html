@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Coverde</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+<!-- ✅ CABEÇALHO -->
+<header class="top-header">
+    <div class="logo-area">
+        <img src="{% static 'css/images/logo.png' %}" alt="Logo Coverde">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="/">Início</a></li>
+        <li><a href="/sobre">Sobre Nós</a></li>
+        <li><a href="#">Soluções</a></li>
+        <li><a href="#">Contactos</a></li>
+      </ul>
+    </nav>
+    <a href="#" class="btn-registar">Registar</a>
+  </header>
+
+<!-- ✅ HERO -->
+<section class="hero-section">
+  <div class="hero-content">
+    <h1>Bem-vindo à COOPERATIVA OURO VERDE 🌿<br>Conectando o campo à sua mesa.</h1>
+    <p>Alimentos frescos e saudáveis à distância de um clique</p>
+    <a href="#" class="btn-cta">Entrar</a>
+  </div>
+</section>
+
+<!-- ✅ PRODUTOS DESTAQUE -->
+<section class="produtos">
+  <div class="produtos-lista">
+    <img src="{% static 'css/images/lettuce.png' %}" alt="Alface">
+    <img src="{% static 'css/images/bellpepper.png' %}" alt="Pimentão">
+    <img src="{% static 'css/images/broccoli.png' %}" alt="Brócolis">    
+    <img src="{% static 'css/images/lettuce.png' %}" alt="Alface">
+    <img src="{% static 'css/images/bellpepper.png' %}" alt="Pimentão">
+    <img src="{% static 'css/images/broccoli.png' %}" alt="Brócolis">   
+    <img src="{% static 'css/images/lettuce.png' %}" alt="Alface">
+    <img src="{% static 'css/images/bellpepper.png' %}" alt="Pimentão">
+    <img src="{% static 'css/images/broccoli.png' %}" alt="Brócolis">   
+    <img src="{% static 'css/images/lettuce.png' %}" alt="Alface">
+    <img src="{% static 'css/images/bellpepper.png' %}" alt="Pimentão">
+    <img src="{% static 'css/images/broccoli.png' %}" alt="Brócolis">   
+  </div>
+</section>
+
+<!-- ✅ COMO FUNCIONA -->
+<section class="como-funciona">
+  <div class="funciona-item">
+    <img src="{% static 'css/images/add.png' %}" alt="Adicionar">
+    <h3>Adicionar produtos</h3>
+    <p>Escolha entre a nossa vasta oferta de produtos.</p>
+  </div>
+  <div class="funciona-item">
+    <img src="{% static 'css/images/delivery.png' %}" alt="Entrega">
+    <h3>Entrega</h3>
+    <p>Receba em casa ou retire num ponto de recolha.</p>
+  </div>
+  <div class="funciona-item">
+    <img src="{% static 'css/images/basket.png' %}" alt="Receber">
+    <h3>Receba produtos</h3>
+    <p>Frescos e saudáveis da sua região.</p>
+  </div>
+</section>
+
+<!-- ✅ CHAMADA -->
+<section class="cta">
+  <h2>COMPRA E VENDA DE PRODUTOS AGRÍCOLAS MAIS SAUDÁVEIS</h2>
+  <p>A COVERDE conecta consumidores a produtores locais.</p>
+</section>
+
+<!-- ✅ CONSUMIDOR / PRODUTOR -->
+<section class="cta-box">
+  <div class="consumidor">
+    <h3>É consumidor?</h3>
+    <p>Aceda facilmente aos produtos mais saudáveis.</p>
+    <a href="#" class="btn-cta">COMEÇA A COMPRAR</a>
+  </div>
+  <div class="produtor">
+    <h3>É produtor?</h3>
+    <p>Venda os seus produtos de forma justa.</p>
+    <a href="#" class="btn-cta">COMEÇA A VENDER</a>
+  </div>
+</section>
+
+</body>
+</html>
+

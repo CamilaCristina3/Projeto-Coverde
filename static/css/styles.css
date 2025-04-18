@@ -1,0 +1,227 @@
+/* RESET GERAL */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+}
+
+/* CABEÇALHO */
+.top-header {
+  background: rgba(0, 50, 0, 0.9);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-area img {
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffc107;
+}
+
+.btn-registar {
+  background: #ffc107;
+  color: black;
+  padding: 10px 18px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+}
+
+.btn-registar:hover {
+  background: #e6b800;
+}
+
+/* HERO SECTION */
+.hero-section {
+  background: #3E8164 url('../images/bp-vegetables.webp') no-repeat center center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+  min-height: 500px;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: auto;
+  background: rgba(89, 173, 123, 0.5);
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.btn-cta {
+  background: #ffc107;
+  color: black;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+  background: #e6b800;
+  transform: scale(1.05);
+}
+
+/* PRODUTOS EM DESTAQUE */
+.produtos {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.produtos-lista {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.produtos-lista img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* COMO FUNCIONA */
+.como-funciona {
+  display: flex;
+  justify-content: space-around;
+  padding: 60px 20px;
+  background: #f9f9f9;
+  flex-wrap: wrap;
+}
+
+.funciona-item {
+  text-align: center;
+  max-width: 250px;
+  margin: 20px;
+}
+
+.funciona-item img {
+  max-width: 80px;
+  margin-bottom: 10px;
+}
+
+/* SEÇÃO SOBRE */
+.sobre-nos {
+  padding: 60px 20px;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.sobre-nos h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #3E8164;
+}
+
+.sobre-nos .info-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.sobre-nos .box {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 25px;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.equipe-img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+/* CHAMADA DE AÇÃO - CTA */
+.cta {
+  text-align: center;
+  padding: 40px 20px;
+  background: #214E3A;
+  color: white;
+}
+
+.cta-box {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.cta-box .btn-cta {
+  background-color: #43936C;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-box .btn-cta:hover {
+  background-color: #377354;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .cta-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+}

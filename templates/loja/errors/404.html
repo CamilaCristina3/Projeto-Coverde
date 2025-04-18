@@ -1,0 +1,8 @@
+{% extends "loja/base.html" %}
+{% block content %}
+<div class="container mt-5">
+  <h1>Página não encontrada (404)</h1>
+  <p>A página que você procura não existe ou foi movida.</p>
+  <a href="{% url 'loja:home' %}" class="btn btn-primary">Voltar à página inicial</a>
+</div>
+{% endblock %}
